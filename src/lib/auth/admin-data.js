@@ -1,14 +1,5 @@
 /**
- * 관리자 대시보드용 데모 데이터
- */
-
-/** @typedef {object} AdminUserRow
- * @property {string} id
- * @property {string} name
- * @property {string} email
- * @property {'admin' | 'user'} role
- * @property {string} lastActive
- * @property {number} recordings
+ * 관리자 대시보드용 데모 녹음 데이터
  */
 
 /** @typedef {object} RecordingRow
@@ -19,42 +10,6 @@
  * @property {string} createdAt
  * @property {'ready' | 'processing' | 'failed'} status
  */
-
-/** @type {AdminUserRow[]} */
-export const ADMIN_USERS = [
-	{
-		id: 'u-admin',
-		name: '관리자',
-		email: 'admin@speaking.ai',
-		role: 'admin',
-		lastActive: '방금 전',
-		recordings: 12
-	},
-	{
-		id: 'u-user',
-		name: '일반 사용자',
-		email: 'user@speaking.ai',
-		role: 'user',
-		lastActive: '12분 전',
-		recordings: 5
-	},
-	{
-		id: 'u-3',
-		name: '김민지',
-		email: 'minji@example.com',
-		role: 'user',
-		lastActive: '1시간 전',
-		recordings: 18
-	},
-	{
-		id: 'u-4',
-		name: '박준호',
-		email: 'junho@example.com',
-		role: 'user',
-		lastActive: '어제',
-		recordings: 3
-	}
-];
 
 /** @type {RecordingRow[]} */
 export const ADMIN_RECORDINGS = [
@@ -92,8 +47,7 @@ export const ADMIN_RECORDINGS = [
 	}
 ];
 
-export const ADMIN_STATS = {
-	users: ADMIN_USERS.length,
+export const RECORDING_STATS = {
 	recordingsToday: 9,
 	processing: ADMIN_RECORDINGS.filter((item) => item.status === 'processing').length,
 	failed: ADMIN_RECORDINGS.filter((item) => item.status === 'failed').length

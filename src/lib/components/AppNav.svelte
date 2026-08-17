@@ -14,7 +14,7 @@
 
 	function handleLogout() {
 		logout();
-		goto(href('/'));
+		goto(href('/login'));
 	}
 </script>
 
@@ -22,7 +22,9 @@
 	<a class="nav__brand" href={href('/')}>Speaking AI</a>
 
 	<nav class="nav__links" aria-label="주요 메뉴">
-		<a class="nav__link" href={href('/')}>녹음</a>
+		{#if auth.isLoggedIn}
+			<a class="nav__link" href={href('/')}>녹음</a>
+		{/if}
 		{#if auth.isAdmin}
 			<a class="nav__link nav__link--accent" href={href('/admin')}>관리자</a>
 		{/if}
@@ -38,7 +40,9 @@
 			</span>
 			<button type="button" class="nav__btn nav__btn--ghost" onclick={handleLogout}>로그아웃</button>
 		{:else}
+			<a class="nav__btn nav__btn--ghost" href={href('/signup')}>회원가입</a>
 			<a class="nav__btn nav__btn--solid" href={href('/login')}>로그인</a>
+			<a class="nav__btn nav__btn--admin" href={href('/login/admin')}>관리자 로그인</a>
 		{/if}
 	</div>
 </header>
@@ -133,6 +137,11 @@
 	}
 
 	.nav__btn--solid {
+		background: var(--accent);
+		color: white;
+	}
+
+	.nav__btn--admin {
 		background: var(--ink);
 		color: white;
 	}

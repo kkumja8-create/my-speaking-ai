@@ -9,15 +9,20 @@ npm install
 npm run dev
 ```
 
-## 데모 계정
+## 계정
+
+로그인해야 녹음과 관리자 기능을 사용할 수 있습니다. 회원 정보는 브라우저 `localStorage`에 저장됩니다.
 
 | 역할 | 이메일 | 비밀번호 |
 | --- | --- | --- |
 | 관리자 | `admin@speaking.ai` | `admin123` |
 | 사용자 | `user@speaking.ai` | `user123` |
 
+- 회원가입: `/signup/`
 - 로그인: `/login/`
-- 관리자 모드: `/admin/` (관리자만 접근)
+- 관리자 로그인: `/login/admin/`
+- 녹음(로그인 필요): `/`
+- 관리자 모드(사용자 추가/수정/삭제): `/admin/`
 
 ## 빌드
 
