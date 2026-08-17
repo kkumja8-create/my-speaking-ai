@@ -31,9 +31,7 @@
 	</nav>
 
 	<div class="nav__actions">
-		{#if !auth.ready}
-			<span class="nav__muted">확인 중…</span>
-		{:else if auth.user}
+		{#if auth.user}
 			<span class="nav__user">
 				<span class="nav__user-name">{auth.user.name}</span>
 				<span class="nav__user-role">{auth.user.role === 'admin' ? '관리자' : '사용자'}</span>

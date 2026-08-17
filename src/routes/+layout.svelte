@@ -16,6 +16,7 @@
 	<link rel="icon" href={favicon} />
 	<title>Speaking AI — 목소리 녹음</title>
 	<meta name="description" content="목소리를 녹음하고 상태를 확인하는 Speaking AI" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 </svelte:head>
 
 <AppNav />

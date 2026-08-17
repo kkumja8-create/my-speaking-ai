@@ -16,7 +16,9 @@ export default defineConfig({
 				// GitHub Pages: set BASE_PATH to the repo name (e.g. my-speaking-ai). Leading "/" is added here.
 				base: process.env.BASE_PATH
 					? `/${process.env.BASE_PATH.replace(/^\/+/, '').replace(/\/+$/, '')}`
-					: ''
+					: '',
+				// Absolute asset URLs avoid broken loads when the site is opened without a trailing slash.
+				relative: false
 			},
 			trailingSlash: 'always',
 			adapter: adapter({
