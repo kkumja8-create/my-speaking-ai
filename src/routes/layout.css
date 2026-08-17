@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+	--font-display: 'Sora', sans-serif;
+	--font-body: 'Figtree', sans-serif;
+	--ink: #143028;
+	--ink-soft: #2a4a3c;
+	--muted: #5f7468;
+	--accent: #1f8a6a;
+	--record: #d64545;
+	--warn: #c9851a;
+	--wash: #d7ebe1;
+	--wash-deep: #b8d4c8;
+	--page-top: #eef6f1;
+	--page-bottom: #d4e8de;
+}
+
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-body);
+	color: var(--ink);
+	background:
+		radial-gradient(ellipse 80% 50% at 50% -10%, color-mix(in oklab, var(--accent) 22%, transparent), transparent 60%),
+		radial-gradient(ellipse 60% 40% at 100% 100%, color-mix(in oklab, var(--wash-deep) 70%, transparent), transparent 55%),
+		linear-gradient(180deg, var(--page-top), var(--page-bottom));
+	background-attachment: fixed;
+}
+
+* {
+	box-sizing: border-box;
+}
