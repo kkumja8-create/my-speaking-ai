@@ -18,14 +18,19 @@ npm run preview
 
 정적 파일은 `build/`에 생성됩니다.
 
-## 배포 (Vercel)
+## 배포
 
-1. [Vercel](https://vercel.com)에 로그인합니다.
-2. 이 저장소를 import하거나 CLI로 배포합니다.
+### GitHub Pages (자동)
+
+`main` 브랜치에 푸시하면 GitHub Actions가 자동으로 배포합니다.
+
+- 사이트: https://kkumja8-create.github.io/my-speaking-ai/
+
+### Vercel
 
 ```sh
 npx vercel login
 npx vercel --prod
 ```
 
-`vercel.json`에 빌드 설정이 포함되어 있습니다. HTTPS에서만 마이크 권한이 동작합니다.
+`vercel.json`에 빌드 설정이 포함되어 있습니다. 마이크는 HTTPS(또는 localhost)에서만 동작합니다.

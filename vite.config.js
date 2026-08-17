@@ -12,6 +12,12 @@ export default defineConfig({
 				// Force runes mode for the project, except for libraries. Can be removed in svelte 6.
 				runes: ({ filename }) => filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
+			paths: {
+				// GitHub Pages: set BASE_PATH to the repo name (e.g. my-speaking-ai). Leading "/" is added here.
+				base: process.env.BASE_PATH
+					? `/${process.env.BASE_PATH.replace(/^\/+/, '').replace(/\/+$/, '')}`
+					: ''
+			},
 			adapter: adapter({
 				fallback: undefined,
 				precompress: false,
