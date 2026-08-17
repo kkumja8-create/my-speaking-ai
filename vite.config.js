@@ -18,6 +18,7 @@ export default defineConfig({
 					? `/${process.env.BASE_PATH.replace(/^\/+/, '').replace(/\/+$/, '')}`
 					: ''
 			},
+			trailingSlash: 'always',
 			adapter: adapter({
 				fallback: undefined,
 				precompress: false,

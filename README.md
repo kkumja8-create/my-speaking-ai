@@ -9,6 +9,16 @@ npm install
 npm run dev
 ```
 
+## 데모 계정
+
+| 역할 | 이메일 | 비밀번호 |
+| --- | --- | --- |
+| 관리자 | `admin@speaking.ai` | `admin123` |
+| 사용자 | `user@speaking.ai` | `user123` |
+
+- 로그인: `/login/`
+- 관리자 모드: `/admin/` (관리자만 접근)
+
 ## 빌드
 
 ```sh

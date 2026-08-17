@@ -8,7 +8,7 @@
 
 <style>
 	.page {
-		min-height: 100dvh;
+		min-height: calc(100dvh - 4.5rem);
 		display: grid;
 		place-items: center;
 		padding: clamp(1.5rem, 5vw, 3rem) 1.25rem;
